@@ -9,15 +9,6 @@ export type Question = {
   correct_answer: string;
   incorrect_answers: string[]
 }
-export enum Difficulty {
-  EASY = "easy",
-  MEDIUM = "medium",
-  HARD = "hard"
-}
-export enum Type {
-  BOOLEAN = "boolean",
-  MULTIPLE = "multiple"
-}
 
 export type QuestionState = Question & {answers: string[]}
 export const fethcQuizQuestions = async (amount: number, difficulty: Difficulty, type: Type) => {
