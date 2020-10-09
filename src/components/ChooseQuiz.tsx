@@ -47,19 +47,17 @@ export default function ChooseQuiz({
       <FormControl component="fieldset"  className={classes.formControl}>
         <FormLabel component="legend" >Choose The Difiiculty Level: </FormLabel>
         <RadioGroup aria-label="quiz" name="quiz" value={difficulty} onChange={handleRadioLevelChange}>
-          <FormControlLabel value="easy" control={<Radio />} label="Easy" />
-          <FormControlLabel value="medium" control={<Radio />} label="Medium" />
-          <FormControlLabel value="hard" control={<Radio />} label="Hard" />
+          <FormControlLabel value="easy" control={<Radio color="primary"/>} label="Easy" />
+          <FormControlLabel value="medium" control={<Radio color="primary"/>} label="Medium" />
+          <FormControlLabel value="hard" control={<Radio color="primary"/>} label="Hard" />
         </RadioGroup>
         <TextField value={NOQuestions} style={{margin: '1.2rem 0'}} label="Number of questions?" onChange={handleNOQuestionChange} />
 
         <FormLabel component="legend">Choose The Difiiculty Level: </FormLabel>
         <RadioGroup aria-label="quiz" name="quiz" value={type} onChange={handleRadioTypeChange}>
-          <FormControlLabel value="multiple" control={<Radio />} label="Multiple Choice" />
-          <FormControlLabel value="boolean" control={<Radio />} label="True/False" />
+          <FormControlLabel value="multiple" control={<Radio color="primary"/>} label="Multiple Choice" />
+          <FormControlLabel value="boolean" control={<Radio color="primary"/>} label="True/False" />
         </RadioGroup>
-
-        
       </FormControl>      
     </form>
   )

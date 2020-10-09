@@ -60,7 +60,7 @@ function App() {
       setUserAnswers(prev => [...prev, answerObject])
     } 
   }
-
+  console.log(questions)
   return (
     <div className="App">
       <h1 style={{display:"flex", justifyContent:"center"}}>Quiz App</h1>
@@ -98,7 +98,7 @@ function App() {
 
       {!loading && !end && userAnswers.length === number + 1 && number !== NOQuestions - 1 
       ? (
-      <Button variant="outlined" color="primary" style={{display:"flex", justifyContent:"center", aligntItem:"center", margin:"1rem 0"}} onClick={nextQuestion}>
+      <Button variant="outlined" color="primary" style={{display:"flex", justifyContent:"center", margin:"1rem 0"}} onClick={nextQuestion}>
         Next Question
       </Button>): null}
     </div>

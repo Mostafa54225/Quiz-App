@@ -30,13 +30,13 @@ export const ButtomWrapper = styled.div<ButtomWrapperProps>`
   button {
     cursor: pointer;
     user-select: none;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     width: 100%;
     height: 40px;
     margin: 5px 0;
-    background: ${({ correct, userClicked }) => correct ? `#56ffa4`: !correct && userClicked ? `#ff5656`: `#56ccff`};
-    color: #fff;
-
+    background: ${({ correct, userClicked }) => correct ? `#1E90FF`: !correct && userClicked ? `red`: `#fff`};
+    color: #000;
+    border: 2px solid #0085a3;
   }
 `
 

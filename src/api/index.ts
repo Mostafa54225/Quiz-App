@@ -10,15 +10,16 @@ export type Question = {
   incorrect_answers: string[]
 }
 
+
 export type QuestionState = Question & {answers: string[]}
-export const fethcQuizQuestions = async (amount: number, difficulty: Difficulty, type: Type) => {
+export const fethcQuizQuestions = async (amount: number, difficulty, type) => {
   const EndPoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=${type}`
   try {
     const {data: {results} } = await axios.get(EndPoint);
     return results.map((question: Question) => (
       {
         ...question,
-        answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
+        answers: shuffleArray([question.correct_answer, ...question.incorrect_answers].sort(() => Math.random() - 0.5))
       }
     ))
   } catch (error) {
